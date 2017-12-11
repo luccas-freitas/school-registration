@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+						http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+	
+	<description>Consultas nomeadas (named queries) para Cursos</description>
+	
+	<named-query name = "Curso.deleteAll">
+		<query>select a from Curso a</query>
+	</named-query>
+	
+	<named-query name = "Curso.findAll">
+		<query>select a from Curso a</query>
+	</named-query>
+	
+	<named-query name = "Curso.findByNome">
+		<query>select a from Curso a where a.nome = :nome</query>
+	</named-query>
+	
+</entity-mappings>

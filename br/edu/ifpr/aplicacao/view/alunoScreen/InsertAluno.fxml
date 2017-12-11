@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="gridPane" hgap="5.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lNome" text="Nome:" />
+            <TextField fx:id="txNome" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+            <Label fx:id="lRg" text="RG:" GridPane.rowIndex="1" />
+            <TextField fx:id="txRg" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label fx:id="lRegistro" text="COD.:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txRegistro" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="lCpf" text="CPF:" GridPane.rowIndex="2" />
+            <TextField fx:id="txCpf" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="lNascimento" text="Nascimento:" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dtNascimento" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Label fx:id="lSexo" text="Sexo:" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rbM" mnemonicParsing="false" text="Macho" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <RadioButton fx:id="rbF" mnemonicParsing="false" text="Femea" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="lEmail" text="E-mail:" GridPane.rowIndex="4" />
+            <TextField fx:id="txEmail" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Label fx:id="lDdd" text="DDD:" GridPane.rowIndex="5" />
+            <TextField fx:id="txDdd" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="lTel" text="Tel.:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="txTel" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <Label fx:id="lTipoTel" text="Tipo:" GridPane.rowIndex="6" />
+            <ComboBox fx:id="cbTel" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="lEndereco" text="Endereço:" GridPane.rowIndex="8" />
+            <TextField fx:id="txEndereco" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <Label fx:id="lNumero" text="Nº:" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="txNumero" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Label fx:id="lComplemento" text="Complemento:" GridPane.rowIndex="9" />
+            <TextField fx:id="txComplemento" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+            <Label fx:id="lBairro" text="Bairro:" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="txBairro" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Label fx:id="lCep" text="CEP:" GridPane.rowIndex="10" />
+            <TextField fx:id="txCep" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+            <Label fx:id="lTipoEnd" text="Tipo:" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <ComboBox fx:id="cbTipo" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+            <Label fx:id="lCidade" text="Cidade:" GridPane.rowIndex="11" />
+            <TextField fx:id="txCidade" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+            <Label fx:id="lUf" text="UF:" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+            <ComboBox fx:id="cbUf" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </GridPane>
+   </children>
+</fx:root>

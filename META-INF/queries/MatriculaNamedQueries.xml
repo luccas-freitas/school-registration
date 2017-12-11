@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+						http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+	
+	<description>Consultas nomeadas (named queries) para Matriculas</description>
+	
+	<named-query name = "Matricula.deleteAll">
+		<query>select a from Matricula a</query>
+	</named-query>
+	
+	<named-query name = "Matricula.findAll">
+		<query>select a from Matricula a</query>
+	</named-query>
+	
+	<named-query name = "Matricula.findByAluno">
+		<query>select a from Matricula a where a.aluno.cpf = :aluno</query>
+	</named-query>
+	
+</entity-mappings>

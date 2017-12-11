@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+						http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+	
+	<description>Consultas nomeadas (named queries) para Alunos</description>
+
+	<named-query name = "Aluno.deleteAll">
+		<query>select a from Aluno a</query>
+	</named-query>
+	
+	<named-query name = "Aluno.findAll">
+		<query>select a from Aluno a</query>
+	</named-query>
+	
+	<named-query name = "Aluno.findByCpf">
+		<query>select a from Aluno a where a.cpf = :cpf</query>
+	</named-query>
+	
+</entity-mappings>

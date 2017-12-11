@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+			 			http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<!-- 
+	Unidade de persistencia cujo nome sera utilizado na chamada da 
+	Persistence.createEntityManagerFactory() para iniciar a execução
+	da aplicação com JPA
+	-->
+	<persistence-unit name="treinamento">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<!-- consultas nomeadas (named queries) -->
+		<mapping-file>META-INF/queries/AlunoNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/CursoNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/EnderecoNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/InstrutorNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/MatriculaNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/ModuloNamedQueries.xml</mapping-file>
+		<mapping-file>META-INF/queries/TelefoneNamedQueries.xml</mapping-file>
+		
+		
+		<!-- classes do Modelo de Objetos que serão "melhoradas" (enhanced) para utilização pela API JPA -->
+		<class>br.edu.ifpr.modelo.Telefone</class>
+		<class>br.edu.ifpr.modelo.Endereco</class>
+		<class>br.edu.ifpr.modelo.Pessoa</class>
+		<class>br.edu.ifpr.modelo.Aluno</class>
+		<class>br.edu.ifpr.modelo.Instrutor</class>
+		<class>br.edu.ifpr.modelo.Modulo</class>
+		<class>br.edu.ifpr.modelo.Curso</class>
+		<class>br.edu.ifpr.modelo.Matricula</class>
+		
+		<!-- Classes que nao estejam listadas acima e integrem o projeto nao serao melhoradas -->
+		<exclude-unlisted-classes/>
+		
+		<properties>
+			<!-- Java Db (Derby) -->
+			<!-- o parametro apos o ponto e virgula indica que a base -->
+			<!-- de dados (um diretorio (pasta) para o java DB) sera -->
+			<!-- criada caso nao exista, no primeiro acesso -->
+			
+			<property name="javax.persistence.jdbc.url"
+					  value="jdbc:mysql://localhost:3306/treinamento?createDatabaseIfNotExist=true&amp;useSSL=false"/>
+			
+			<property name="javax.persistence.jdbc.driver"
+					  value="com.mysql.jdbc.Driver"/>
+					  
+			<!-- Usuario e senha -->
+			<property name="javax.persistence.jdbc.user"
+					  value="root"/>
+			<property name="javax.persistence.jdbc.password"
+					  value="senha061294"/>
+			
+			<!-- durante tempo de execução, database é limpa e criada novamente -->
+			<property name="javax.persistence.schema-generation.database.action"
+					  value="drop-and-create"/>
+					  
+			<!-- valida o arquivo META-INF/persistence.xml -->
+			<property name="eclipselink.orm.validate.schema" value="true"/>
+			
+			<!-- desabilita (OFF) ou habilita (SERVERE, WARNING, INFO, CONFIG -->
+			<!-- FINE, FINER, FINEST, ALL) o log -->
+			<property name="eclipselink.logging.level" value="OFF"/>
+			
+		</properties>
+	</persistence-unit>
+</persistence>		
